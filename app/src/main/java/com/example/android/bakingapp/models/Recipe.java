@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
+
 /**
  * Created by Lawrey on 17/10/17.
  */
 
+@Parcel
 public class Recipe {
     @SerializedName("id")
     private int recipeId;
@@ -27,6 +31,7 @@ public class Recipe {
     @SerializedName("image")
     private String image;
 
+    @ParcelConstructor
     public Recipe(int recipeId, String name, ArrayList<Ingredient> ingredients, ArrayList<Step> steps, int servings, String image) {
         this.recipeId = recipeId;
         this.name = name;

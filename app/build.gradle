@@ -36,9 +36,13 @@ dependencies {
     //Retrofit
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
 
-    // JSON Parsing
+    //JSON Parsing
     compile 'com.google.code.gson:gson:2.6.1'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //Parceler
+    compile 'org.parceler:parceler-api:1.1.9'
+    annotationProcessor 'org.parceler:parceler:1.1.9'
 
     testCompile 'junit:junit:4.12'
 }

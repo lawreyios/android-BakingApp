@@ -2,10 +2,14 @@ package com.example.android.bakingapp.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
+
 /**
  * Created by Lawrey on 17/10/17.
  */
 
+@Parcel
 public class Step {
 
     @SerializedName("id")
@@ -23,6 +27,7 @@ public class Step {
     @SerializedName("thumbnailURL")
     private String thumbnailURL;
 
+    @ParcelConstructor
     public Step(int stepId, String shortDescription, String description, String videoURL, String thumbnailURL) {
         this.stepId = stepId;
         this.shortDescription = shortDescription;

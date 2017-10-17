@@ -2,10 +2,14 @@ package com.example.android.bakingapp.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
+
 /**
  * Created by Lawrey on 17/10/17.
  */
 
+@Parcel
 public class Ingredient {
 
     @SerializedName("quantity")
@@ -17,7 +21,8 @@ public class Ingredient {
     @SerializedName("ingredient")
     private String ingredient;
 
-    public Ingredient(int quantity, String measure, String ingredient) {
+    @ParcelConstructor
+    public Ingredient(double quantity, String measure, String ingredient) {
         this.quantity = quantity;
         this.measure = measure;
         this.ingredient = ingredient;
